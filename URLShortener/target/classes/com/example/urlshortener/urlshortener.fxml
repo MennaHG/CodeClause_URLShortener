@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="bp"  prefHeight="793.0" prefWidth="1045.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.urlshortener.HelloController">
+   <center>
+      <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="735.0" prefWidth="959.0" spacing="20.0" style="-fx-background-color: white; -fx-background-radius: 10px;">
+         <children>
+            <Label alignment="CENTER" prefHeight="83.0" prefWidth="410.0" style="-fx-alignment: center;" text="URL Shortener" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="56.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="40.0" />
+               </VBox.margin>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="243.0" prefWidth="927.0" spacing="10.0">
+               <children>
+                  <TextField fx:id="orgUrl" alignment="BASELINE_LEFT" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="767.0" promptText="Enter URL here">
+                     <font>
+                        <Font name="Calibri" size="36.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="shortenbtn" mnemonicParsing="false" onAction="#shorten" prefHeight="59.0" prefWidth="125.0" style="-fx-background-color: blue;" text="Shorten" textFill="WHITE">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="356.0" prefWidth="927.0" spacing="10.0">
+               <children>
+                  <TextField fx:id="opUrl" alignment="BASELINE_LEFT" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="769.0" promptText="Shortened Link ">
+                     <font>
+                        <Font name="Calibri" size="36.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="copybtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#copy" prefHeight="60.0" prefWidth="65.0" style="-fx-background-color: red; -fx-background-radius: 30px;" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@copy.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
